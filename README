@@ -1,0 +1,58 @@
+Rustoleum
+
+This is a project/challenge to try to help ward off the ravages of
+time and corrosion, just like the anti-rust paint Rustoleum claims to
+do.  However, in this case it is software engineers we are trying to
+help.  As an ancient software engineer turned 50 year-old
+pointy-haired-boss myself, I decided that I needed to get up to speed
+on something more modern than FORTRAN, so I came up with the following
+modest challenge:
+
+Write a reasonably efficient (in terms of programmer time and program
+size) program in each of the 11 languages listed below that produces
+the same output (see the file output.txt) as the following snippet of
+shell script (see the file reference.sh):
+
+    % cat README | tr -cs "[:alnum:]" "\n" | sort | uniq | head -50
+
+The input file (this file "README" in the example above) is expected
+to be a human-readable text file containing words separated by
+whitespace. The program should not explode or otherwise spew garbage
+if presented with unreasonable input. The program may optionally
+produce diagnostic output if faced with abnormal inputs, but should
+otherwise be silent. The output of each subject program should have
+the same MD5 checksum as the reference output (see the file
+output.txt.md5).
+
+The languages are as follows:
+
+    - C
+    - C++ 
+    - Perl (http://www.perl.org)
+    - Java (http://www.java.com)
+    - Python (http://www.python.org)
+    - Ruby (http://www.ruby-lang.org)
+    - Scala (http://www.scala-lang.org)
+    - Haskell (http://haskell.org)
+    - Gnu Smalltalk (http://smalltalk.gnu.org)
+    - Go (http://golang.org)
+    - Clojure (http://clojure.org)
+
+Some quite popular languages (C#, Objective-C and Visual Basic) are
+omitted because they are platform specific in one way or another. Some
+others (PHP, Smalltalk) are omitted because they are not suitable for
+a command-line environment.
+
+The primary intent is to learn and demonstrate which language is best
+suited to day to day scripting tasks.  The secondary intents are to
+provide a kind of "dojo " for learning these languages and to learn
+more about the functional vs. procedural and object-oriented aspects
+of each programming environment.
+
+The use of built-in functions and libraries will be limited to those
+with reasonable portability and default availability (i.e. the largest
+common subset, such as libc for the C case). This also implies that no
+third party components shall be used.  As a bonus, use incremental
+development and TDD techniques.  The reference environment will be
+Linux but the implementations should work on major platforms
+(i.e. Linux, Windows, BSD and OS X).
