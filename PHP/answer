@@ -1,0 +1,29 @@
+#!/usr/local/bin/php
+<?php
+
+function printword ($v, $k)
+{
+    echo $v . "\n";
+}
+
+if ($argc != 2) {
+    die ("usage: " . basename ($argv[0]) . " <file>\n");
+}
+
+if (! $infile = @fopen ($argv[1], "r")) {
+    die ("can't open '${argv[1]}'\n");
+}
+
+$list = array ();
+
+while ($buf = fgets ($infile)) {
+    preg_match_all ('/[a-zA-Z0-9]+/', $buf, $matches, 0, 0);
+    $list = array_merge ($list, $matches[0]);
+}
+
+sort ($list);
+$list = array_slice (array_unique ($list), 0, 50);
+
+array_walk ($list, printword);
+
+?>

@@ -1,0 +1,12 @@
+I know you discounted the language - but attached is a solution in PHP.
+
+It has the added benefit of error detection & reporting, plus will
+also accept URLs in addition to file names.
+
+e.g.
+% ./answer https://github.com/techn0mad/rustoleum/raw/master/README
+
+now, will you retract your statement about PHP not being a scripting
+language? :-)
+
+dave c
