@@ -30,6 +30,7 @@ The languages are as follows:
     - C++ 
     - Perl (http://www.perl.org)
     - Java (http://www.java.com)
+    - PHP (http://www.php.net)
     - Python (http://www.python.org)
     - Ruby (http://www.ruby-lang.org)
     - Scala (http://www.scala-lang.org)
@@ -39,9 +40,7 @@ The languages are as follows:
     - Clojure (http://clojure.org)
 
 Some quite popular languages (C#, Objective-C and Visual Basic) are
-omitted because they are platform specific in one way or another. Some
-others (PHP, Smalltalk) are omitted because they are not suitable for
-a command-line environment.
+omitted because they are platform specific in one way or another.
 
 The primary intent is to learn and demonstrate which language is best
 suited to day to day scripting tasks.  The secondary intents are to
